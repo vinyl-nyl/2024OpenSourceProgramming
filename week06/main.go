@@ -2,12 +2,16 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 )
 
 func main() {
-	i := 55
+	i := 13
+	f := 12.9
 
-	fmt.Printf("value i : %d\n", i)
-	fmt.Print("value i : ", i, "\n")
-	fmt.Println("value i : ", i)
+	fmt.Printf("value i : %d, value f : %f\n", i, f)
+	// fmt.Printf("value i : %d, value f : %f\n", i, f) // invalid operation: i * f (mismatched types int and float
+	fmt.Printf("%d * %f = %d\n", i, f, i*int(f))     // conversion
+	fmt.Printf("%d * %f = %f\n", i, f, float64(i)*f) // conversion
+	fmt.Println(reflect.TypeOf(i))
 }
