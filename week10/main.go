@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"log"
-	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -27,7 +26,8 @@ func main() {
 	if n < 2 { // 1보다 큰 자연수 중 1과 자기 자신만을 약수로 가지는 수
 		isPrime = false
 	} else {
-		for j := 2; j <= int(math.Sqrt(float64(n))); j++ { // 1부터 입력된 수까지 반복
+		// for j := 2; j <= int(math.Sqrt(float64(n))); j++ { // 1부터 입력된 수까지 반복
+		for j := 2; j*j <= n; j++ {
 			if n%j == 0 { // 약수면
 				// counts++ // 나누어 떨어지는 횟수 카운트
 				isPrime = false
