@@ -21,11 +21,16 @@ func main() {
 	n, err := strconv.Atoi(i)
 
 	// counts := 0
-	var isPrime bool = true  // 가독성, 메모리 사이즈 개선
-	for j := 2; j < n; j++ { // 1부터 입력된 수까지 반복
-		if n%j == 0 { // 약수면
-			// counts++ // 나누어 떨어지는 횟수 카운트
-			isPrime = false
+	var isPrime bool = true // 가독성, 메모리 사이즈 개선
+
+	if n < 2 {
+		isPrime = false
+	} else {
+		for j := 2; j < n; j++ { // 1부터 입력된 수까지 반복
+			if n%j == 0 { // 약수면
+				// counts++ // 나누어 떨어지는 횟수 카운트
+				isPrime = false
+			}
 		}
 	}
 
