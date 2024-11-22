@@ -4,7 +4,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"week11/keyboard"
+	"week13/week11/keyboard"
 )
 
 func isPrime(n int) bool {
