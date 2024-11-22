@@ -2,16 +2,12 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"time"
 )
 
 func main() {
-	var result string
-	result = fmt.Sprintf("%0.1f 나누기 %0.1f(은)는 %0.2f입니다\n", 1.0, 3.0, 1.0/3.0)
-	fmt.Print(result)
-
-	i := 1
-	for i <= 10 {
-		fmt.Printf("%d\n", i)
-		i++
-	}
+	rand.Seed(time.Now().Unix())
+	target := rand.Intn(5) + 1 // print 0, 1, 2
+	fmt.Printf("%d\n", target)
 }
