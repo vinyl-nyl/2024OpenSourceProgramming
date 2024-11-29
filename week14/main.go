@@ -30,11 +30,11 @@ func main() {
 
 		switch {
 		case age < 12:
-			vs[i] = visitor{age: age, cost: 5}
+			vs[i] = visitor{age: age, cost: 4}
 		case age >= 12 && age < 65:
-			vs[i] = visitor{age: age, cost: 10}
-		case age >= 65:
 			vs[i] = visitor{age: age, cost: 7}
+		case age >= 65:
+			vs[i] = visitor{age: age, cost: 5}
 		}
 	}
 
